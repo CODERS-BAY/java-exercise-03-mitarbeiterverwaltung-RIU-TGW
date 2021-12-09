@@ -1,26 +1,29 @@
-package application;
+package app.src.main.java.application;
 
 public class Department {
 	// fields
-	private String name;
-	private int id;
-	private String counter;
-	private String city;
+	String name;
+	int id;
+	String country;
+	String city;
 
 	// Constructors
-
-	public Department() {
-
-	}
-
-	public Department(String name, int id, String counter, String city) {
+	public Department(String name, int id, String country, String city) {
 		this.name = name;
 		this.id = id;
-		this.counter = counter;
+		this.country = country;
 		this.city = city;
 	}
 
-	public boolean isEquals(Department other) {
-		return false;
+	public void print() {
+		System.out.println();
+		System.out.println("Department information:");
+		System.out.println(String.format("  Name: %10s", name));
+		System.out.println(String.format("  ID: %10d", id));
+		System.out.println(String.format("  Country: %10s", country));
+		System.out.println(String.format("  City: %10s", city));
 	}
+	//public boolean isEquals(Department other) {
+	//	return false;
+	//}
 }
